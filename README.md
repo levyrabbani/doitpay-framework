@@ -39,7 +39,7 @@ Framework ini mengikuti pola **Page Object Model (POM)** dan menggunakan pendeka
 
 ### Clone Repository
 ```bash
-git clone https://github.com/yourusername/doitpay-framework.git
+git clone https://github.com/levyrabbani/doitpay-framework.git
 cd doitpay-framework
 ```
 
