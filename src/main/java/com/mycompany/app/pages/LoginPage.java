@@ -41,9 +41,5 @@ public class LoginPage {
             return "";
         }
     }
-
-    public void waiting() {
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-    }
 }
 

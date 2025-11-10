@@ -11,6 +11,5 @@ public class RegistrationTest extends BaseTest {
         RegistrationPage rp = new RegistrationPage(driver);
         rp.openRegistration("https://www.saucedemo.com/");
         rp.register("test_user@example.com", "test_user", "Password123!");
-        // verification depends on real application
     }
 }

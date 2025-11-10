@@ -44,7 +44,6 @@ public class LoginTest extends BaseTest {
         LoginPage lp = new LoginPage(driver);
         lp.open("https://www.saucedemo.com/") ;
         lp.login(username, password);
-        lp.waiting();
         Assert.assertTrue(driver.getCurrentUrl().contains("inventory.html"), "Login failed or user not redirected to inventory page.");
     }
 
@@ -56,7 +55,6 @@ public class LoginTest extends BaseTest {
         LoginPage lp = new LoginPage(driver);
         lp.open("https://www.saucedemo.com/") ;
         lp.login(username, password);
-        lp.waiting();
         String err = lp.getErrorMessage();
         Assert.assertTrue(err.contains("Epic sadface"), "Expected error message not shown");
     }

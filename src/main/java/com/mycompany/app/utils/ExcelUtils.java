@@ -11,10 +11,6 @@ import java.util.*;
 /**
  * Utility class for reading test data from Excel files.
  * Works with .xlsx format using Apache POI.
- *
- * Example usage:
- * ExcelUtils excel = new ExcelUtils("src/test/resources/testdata/users.xlsx", "LoginData");
- * String username = excel.getCellData(1, "Username");
  */
 public class ExcelUtils {
     private Sheet sheet;
