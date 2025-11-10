@@ -14,6 +14,14 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.mycompany.app.tests.RegistrationTest -->
+      <class name="com.mycompany.app.tests.AddToCartTest">
+        <methods>
+          <include name="testAddToCart"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.mycompany.app.tests.AddToCartTest -->
     </classes>
   </test> <!-- ECommerce Tests(failed) -->
 </suite> <!-- Failed suite [ECommerce Suite] -->

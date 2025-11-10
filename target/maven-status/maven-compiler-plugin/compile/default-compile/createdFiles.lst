@@ -2,7 +2,6 @@ com\mycompany\app\pages\RegistrationPage.class
 com\mycompany\app\pages\LoginPage.class
 com\mycompany\app\reports\AllureListener.class
 com\mycompany\app\base\BaseTest.class
-com\mycompany\app\utils\ExcelUtils$1.class
 com\mycompany\app\App.class
 com\mycompany\app\utils\ExcelUtils.class
 com\mycompany\app\pages\ProductPage.class

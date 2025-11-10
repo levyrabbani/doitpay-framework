@@ -8,6 +8,7 @@
             <class name="com.mycompany.app.tests.LoginTest"/>
             <class name="com.mycompany.app.tests.AddToCartTest"/>
             <class name="com.mycompany.app.tests.RegistrationTest"/>
+            <class name="com.mycompany.app.tests.ApiTest"/>
         </classes>
     </test>
 </suite>

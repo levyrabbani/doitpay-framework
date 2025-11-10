@@ -78,4 +78,34 @@ public class ExcelUtils {
 
         return dataList;
     }
+
+    public static Object[][] getTestDataAsMap(String filePath, String sheetName) {
+        try (InputStream is = ExcelUtils.class.getClassLoader().getResourceAsStream(filePath)) {
+            Workbook workbook = new XSSFWorkbook(is);
+            Sheet sheet = workbook.getSheet(sheetName);
+            int rowCount = sheet.getPhysicalNumberOfRows();
+            Row headerRow = sheet.getRow(0);
+            int colCount = headerRow.getPhysicalNumberOfCells();
+
+            Object[][] data = new Object[rowCount - 1][1];
+
+            for (int i = 1; i < rowCount; i++) {
+                Row currentRow = sheet.getRow(i);
+                Map<String, String> map = new HashMap<>();
+
+                for (int j = 0; j < colCount; j++) {
+                    String header = headerRow.getCell(j).getStringCellValue();
+                    Cell cell = currentRow.getCell(j);
+                    String value = (cell == null) ? "" : cell.toString();
+                    map.put(header, value);
+                }
+                data[i - 1][0] = map;
+            }
+
+            return data;
+
+        } catch (Exception e) {
+            throw new RuntimeException("Error reading Excel data: " + e.getMessage());
+        }
+    }
 }

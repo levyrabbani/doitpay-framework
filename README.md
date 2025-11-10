@@ -23,16 +23,16 @@ Framework ini mengikuti pola **Page Object Model (POM)** dan menggunakan pendeka
 
 ## Teknologi yang Digunakan
 
-| Komponen | Library / Alat |
-|-----------|----------------|
-| Bahasa Pemrograman | Java 17 |
-| Build Tool | Maven |
+| Komponen            | Library / Alat |
+|---------------------|--|
+| Bahasa Pemrograman  | Java 17 |
+| Build Tool          | Maven |
 | Framework Pengujian | TestNG |
-| Otomasi UI | Selenium WebDriver |
-| Manajemen Data | Apache POI |
-| Pelaporan | Allure Reports |
-| Browser | Chrome (via WebDriverManager) |
-
+| Otomasi UI          | Selenium WebDriver |
+| Manajemen Data      | Apache POI |
+| Pelaporan           | Allure Reports |
+| Browser             | Chrome (via WebDriverManager) |
+| API                 | RestAssured |
 ---
 
 ## Langkah-Langkah Setup
@@ -74,22 +74,6 @@ Perintah tersebut akan membuka laporan HTML interaktif yang menampilkan:
 - Waktu eksekusi
 - Log tiap langkah pengujian
 
----
-
-## Manajemen Data Pengujian
-
-Data pengujian disimpan dalam file `testdata/users.xlsx`:
-- **Sheet1** → Berisi data login valid
-- **Sheet2** → Berisi data login invalid
-
-Struktur kolom:
-| username      | password     |
-|----------------|--------------|
-| standard_user  | secret_sauce |
-| invalid_user   | wrong_pass   |
-
----
-
 ## Penanganan Error
 
 Setiap page object memiliki:
@@ -104,14 +88,13 @@ Jika pengujian gagal, pesan assertion akan menampilkan penyebab kegagalan.
 ## Asumsi & Keterbatasan
 
 - Aplikasi yang diuji: [https://www.saucedemo.com](https://www.saucedemo.com)
+- API yang diuji: [https://jsonplaceholder.typicode.com]
 - Browser default yang digunakan adalah Chrome (bisa diubah di konfigurasi).
-- Saat ini hanya mendukung pengujian web (belum mencakup pengujian API).
 
 ---
 
 ## Rencana Pengembangan Selanjutnya
 
-- Integrasi dengan pengujian API
 - Menjalankan pengujian secara paralel dengan konfigurasi TestNG XML
 - Integrasi ke pipeline CI/CD (misalnya Jenkins atau GitHub Actions)
 
