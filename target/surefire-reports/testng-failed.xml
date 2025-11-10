@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ECommerce Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="com.mycompany.app.reports.AllureListener"/>
+  </listeners>
+  <test thread-count="5" name="ECommerce Tests(failed)" verbose="0">
+    <classes>
+      <class name="com.mycompany.app.tests.RegistrationTest">
+        <methods>
+          <include name="testRegistration"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.mycompany.app.tests.RegistrationTest -->
+    </classes>
+  </test> <!-- ECommerce Tests(failed) -->
+</suite> <!-- Failed suite [ECommerce Suite] -->

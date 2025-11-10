@@ -1,0 +1,5 @@
+# Created at 2025-11-10T16:21:41.203
+Boot Manifest-JAR contains absolute paths in classpath 'D:\levy\kerja\rekrutmen\doitpay\doitpay-framework\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
